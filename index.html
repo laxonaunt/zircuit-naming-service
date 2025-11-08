@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zircuit Naming Service - Testnet</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- WalletConnect SDK -->
+    <script src="https://unpkg.com/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
+    <!-- Ethers.js for blockchain interaction -->
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.6.9/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1> Zircuit Naming Service</h1>
+            
+<div class="header-links">
+    <a href="faucet.html" class="faucet-link"> Get Test Tokens</a>
+</div>
+            <div class="testnet-banner">Currently Running on Testnet </div>
+            <div class="wallet-section">
+                <button id="connectWallet" class="btn-connect">Connect Wallet</button>
+                <div id="walletInfo" class="wallet-info hidden">
+                    <span id="walletAddress"></span>
+                    <span id="tokenBalance" class="balance"></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <div class="search-section">
+                <h2>Register Your .zrc Domain</h2>
+                <p> <strong> Your Identity on ZircuitL2</strong></p>
+                
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="domainInput" 
+                        placeholder="Enter your domain name..."
+                    >
+                    <span class="domain-suffix">.zrc</span>
+                    <button id="searchBtn" class="btn-search">Check Availability</button>
+                </div>
+                
+                <div id="availabilityResult" class="result hidden"></div>
+            </div>
+
+            <!-- Registration Section -->
+            <div id="registrationSection" class="registration-section hidden">
+                <div class="price-info">
+                    <h3>Domain Available! 🎉</h3>
+                    <p>Registration Price: <strong id="registrationPrice">1</strong> MockZRC</p>
+                    <p>Your Balance: <strong id="userBalance">0</strong> MockZRC</p>
+                </div>
+                <button id="registerBtn" class="btn-register">Register Domain</button>
+            </div>
+
+            <!-- Loading Animation -->
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Processing...</p>
+            </div>
+
+            <!-- Transaction Status -->
+            <div id="transactionStatus" class="transaction-status hidden"></div>
+        </main>
+
+        <!-- Info Section -->
+        <footer>
+            <div class="info">
+                <h3>How it works:</h3>
+                <ul>
+                    <li>1. Connect your wallet to Zircuit Garfield Testnet</li>
+                    <li>2. Search for available .zrc domains</li>
+                    <li>3. Register with MockZRC test tokens</li>
+                    <li>4. Use yourname.zrc instead of long addresses!</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

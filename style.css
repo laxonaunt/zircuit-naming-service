@@ -1,0 +1,300 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f8fff8 0%, #e8f5e8 100%);
+    color: #2d5016;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #4caf50;
+}
+
+h1 {
+    color: #2d5016;
+    font-size: 2.5rem;
+}
+
+.testnet-banner {
+    background: #0c0c0b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Wallet Section */
+.wallet-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-connect {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-connect:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+.wallet-info {
+    background: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #4caf50;
+}
+
+.balance {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Search Section */
+.search-section {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.search-section h2 {
+    color: #2d5016;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.search-box {
+    display: flex;
+    max-width: 500px;
+    margin: 30px auto;
+    position: relative;
+}
+
+#domainInput {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #4caf50;
+    border-radius: 8px 0 0 8px;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+.domain-suffix {
+    background: #4caf50;
+    color: white;
+    padding: 15px 20px;
+    border: 2px solid #4caf50;
+    border-left: none;
+    font-weight: bold;
+}
+
+.btn-search {
+    background: #2d5016;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-search:hover {
+    background: #1f3a0f;
+}
+
+/* Results and Registration */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.available {
+    background: #e8f5e8;
+    color: #2d5016;
+    border: 2px solid #4caf50;
+}
+
+.taken {
+    background: #ffebee;
+    color: #c62828;
+    border: 2px solid #f44336;
+}
+
+.registration-section {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.1);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.price-info {
+    margin-bottom: 20px;
+}
+
+.btn-register {
+    background: linear-gradient(135deg, #4caf50, #2d5016);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-register:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+/* Loading Animation */
+.loading {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #4caf50;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Transaction Status */
+.transaction-status {
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.success {
+    background: #e8f5e8;
+    color: #2d5016;
+    border: 2px solid #4caf50;
+}
+
+.error {
+    background: #ffebee;
+    color: #c62828;
+    border: 2px solid #f44336;
+}
+
+/* Footer Info */
+.info {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.1);
+}
+
+.info h3 {
+    color: #2d5016;
+    margin-bottom: 15px;
+}
+
+.info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e8f5e8;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .search-box {
+        flex-direction: column;
+    }
+    
+    #domainInput {
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    
+    .domain-suffix {
+        border-radius: 8px;
+        border-left: 2px solid #4caf50;
+        margin-bottom: 10px;
+    }
+    
+    .btn-search {
+        border-radius: 8px;
+    }
+    
+    .wallet-section {
+        flex-direction: column;
+        width: 100%;
+    }
+}
